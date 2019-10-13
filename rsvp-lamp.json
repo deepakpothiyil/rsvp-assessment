@@ -1,7 +1,7 @@
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "RSVP assessment - LAMP stack using EC2, ELB, LC, ASG and RDS",
+  "Description" : "RSVP assessment LAMP stack using EC2, ELB, LC, ASG and RDS",
 
   "Parameters" : {
     "VpcId" : {
