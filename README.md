@@ -62,7 +62,7 @@ Here is the tested resource creation for ALB listener with the ACM certificate:
      "ALBListener" : {
       "Type" : "AWS::ElasticLoadBalancingV2::Listener",
       "Properties" : {
-        "Certificates" : [{ "CertificateARN" : "arn:aws:acm:ap-southeast-2:488043798580:certificate/6c37cdbd-0a70-48fc-a9b9-74d5b827cfc4" }],
+        "Certificates" : [{ "CertificateARN" : "arn:aws:acm:ap-southeast-2:488043XXXXXX:certificate/6c37cdbd-0a70-48fc-a9b9-74d5b827cfc4" }],
         "DefaultActions" : [{
           "Type" : "forward",
           "TargetGroupArn" : { "Ref" : "ALBTargetGroup" }
