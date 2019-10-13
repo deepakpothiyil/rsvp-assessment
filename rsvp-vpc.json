@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "VPC: public and private subnets in two availability zones",
+    "Description": "VPC with public and private subnets in two availability zones",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
