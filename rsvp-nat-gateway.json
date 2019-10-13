@@ -162,11 +162,9 @@
     },
     "Outputs": {
         "TemplateID": {
-            "Description": "cloudonaut.io template id.",
             "Value": "vpc/vpc-nat-gateway"
         },
         "TemplateVersion": {
-            "Description": "cloudonaut.io template version.",
             "Value": "10.6.0"
         },
         "StackName": {
