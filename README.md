@@ -24,7 +24,7 @@ Steps:
          - EC2 instances launched by the ASG using the Launch configs, backed by the load balancer.
          - A MySQL RDS instance
          - Security groups for EC2, load balancer and RDS with the necessary port configurations
-         - Output URL to access the application
+         - Output URL to access the PHP Sample page
          
     Parameter values to be entered at the launch time are:
     
