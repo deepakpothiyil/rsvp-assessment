@@ -1,0 +1,18 @@
+Describe how you would implement the following requirements:
+
+* Provide access into the stack for operations staff who might need to inspect an instance directly
+
+   To the EC2 instances :
+   Create a Bastion EC2 instance in public subnet and ask the staff to use this instance for accessing the target instance after the necessary IP whitelisting on security groups, and authorising the respective SSH keys on the instances for successful hops.
+   To the RDS instance:
+   Create a Bastion EC2 instance in public subnet and setup a tunnel through it to access the RDS database.
+
+  
+ * Make server access and error logs available in CloudWatch Logs
+  Install AWS cloudwatchlogs agent on the EC2 instances, configure the agent with the details such as the log group name etc. Attach an IAM role to the instance with permissions to send the logs to cloud watch.
+
+ * Serve via a CloudFront distribution
+  Use the load balancer as the origin for CloudFront
+
+ * Use Lambda to handle error pages
+   Cloudfront Lambda@Edge could be used to invoke lambda functions to handle the error.
