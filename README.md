@@ -42,8 +42,10 @@ Steps:
   
 
 Main reference sources:
-https://templates.cloudonaut.io/en/stable/vpc/
-https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/UserGuide/deploying.applications.html
+
+         https://templates.cloudonaut.io/en/stable/vpc/
+         
+         https://docs.amazonaws.cn/en_us/AWSCloudFormation/latest/UserGuide/deploying.applications.html
 
          
 Issues encountered/unresolved:
@@ -69,8 +71,10 @@ Here is the tested resource creation for ALB listener with the ACM certificate:
     },
 
 This could be a bug in the AWS Cloudformation as the AWS documentation mentions the use of 'Certificates' and 'CertificateARN' for 'AWS::ElasticLoadBalancingV2::Listener' as follows:
- https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html
- https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates-1.html
+
+     https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html
+     
+     https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-certificates-1.html
  
  
  
