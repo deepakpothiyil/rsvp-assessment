@@ -1,6 +1,6 @@
 # RSVP Assessment
 
-This repository consists of 3 cloudformation templates which will be used to launch a simple LAMP stack.
+This repository consists of 3 cloudformation templates used to launch a simple LAMP stack.
 
 Steps:
 
@@ -25,6 +25,21 @@ Steps:
          - A MySQL RDS instance
          - Security groups for EC2, load balancer and RDS with the necessary port configurations
          - Output URL to access the application
+         
+    Parameter values to be entered at the launch time are:
+    
+           - DBAllocatedStorage ('5GB' default for RDS)
+           - DBInstanceClass ('db.t2.small' default for RDS)
+           - DBName ('rsvpdb' default for RDS)
+           - DBPassword (Password for MySQL database (8 to 20 characters - must contain only alphanumeric characters)
+           - InstanceType ('t2.small' by default for EC2)
+           - KeyName (Select a key from your AWS account which will be used for SSH into EC2)
+           - MultiAZDatabase ( 'true' for a HA setup, else 'false' )
+           - PublicSubnets ( Select the public subnets created in step 1 )
+           - SSHLocation (enter the static ip or VPN ip used in RSVP office)
+           - VpcId (VPC id of the VPC created in step 1)
+           - WebServerCapacity (2 EC2 instances to start with by default)
+  
          
          
          
