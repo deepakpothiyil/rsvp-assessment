@@ -16,7 +16,7 @@ Steps:
         ParentAlertStack : can be left blank
         SubnetZone : Choose A or B
         
-4. Use the template 'rsvp-lamp' to launch a CF stack which will create the following resources:
+4. Use the template 'rsvp-lamp.json' to launch a CF stack which will create the following resources:
 
          - Creates a launch config using a LAMP stack and Linux AMI
          - Application Load Balancer
