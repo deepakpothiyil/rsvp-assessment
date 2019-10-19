@@ -102,6 +102,11 @@
       "MaxLength": "18",
       "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
       "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
+    },
+    "CPUTargetValue" : {
+        "Description" : "The average CPU usage threshold value beyond which Autoscaling should spin up new instances",
+        "Type" : "Number",
+        "MinValue" : "25"
     }
   },
 
@@ -478,6 +483,24 @@
           "CidrIp" : { "Ref" : "SSHLocation"}
         } ],
         "VpcId" : { "Ref" : "VpcId" }
+      }
+    },
+    
+    "CPUScalingPolicy":{
+      "Type":"AWS::AutoScaling::ScalingPolicy",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"WebServerGroup"
+        },
+        "PolicyType":"TargetTrackingScaling",
+        "TargetTrackingConfiguration":{
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ASGAverageCPUUtilization"
+          },
+          "TargetValue":{
+            "Ref":"CPUTargetValue"
+          }
+        }
       }
     },
 
